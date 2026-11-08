@@ -1,0 +1,11 @@
+{
+  "name": "ch9-deck-build",
+  "private": true,
+  "description": "Icon rendering helpers for the Chapter 9 M1-M2 deck",
+  "dependencies": {
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-icons": "^5.7.0",
+    "sharp": "^0.35.5"
+  }
+}
