@@ -460,7 +460,133 @@ Compare the attacks by input, authority, outcome and first limiting control. The
 ---
 
 
-## Slide 28 · References — Parts 1–2
+## Slide 28 · Securing high-velocity code and compliance
+
+**Say:**
+"Welcome to Part 4 of our presentation on the Security of Agentic AI Tools: Verification and Governance. As AI coding agents dramatically accelerate software development velocity, they introduce new security and compliance challenges that traditional review processes cannot keep up with. In this section, we will explore throughput liability, automated static analysis, dependency auditing, regulatory compliance, and CI/CD integration." 
+
+---
+
+
+## Slide 29: AI-Generated Code Security & Throughput Liability
+
+**Say:**
+"When large language models generate code, they frequently reproduce vulnerable patterns learned from public code corpora, such as SQL injection, path traversal, and weak hashing. Compounding this is 'throughput liability'—agents write code faster than human reviews can inspect, bypassing traditional review cycles. To mitigate this, developers must embed defensive rules directly into agent system prompts, such as enforcing parameterized queries and requiring bcrypt hashing.“
+
+
+---
+
+
+
+
+## Slide 30: Common Vulnerabilities
+
+**Say:**
+"Here are the details of the common vulnerabilities, which are: SQL Injection, Path Traversal, Hardcoded secrets, insecure deserialization, …” *next slide* 
+
+The Open Worldwide Application Security Project (OWASP) is a 501(c)(3) nonprofit foundation that works to improve the security of software. 
+
+
+---
+
+
+
+
+## Slide 31: Common Vulnerabilities
+
+**Say:**
+"… Missing authentication, Overly broad CORS (Cross-Origin Resource Sharing), Weak cryptography, Command injection, and insufficient input validation.” 
+
+The Open Worldwide Application Security Project (OWASP) is a 501(c)(3) nonprofit foundation that works to improve the security of software. 
+
+---
+
+
+
+
+## Slide 32: Automated Verification Standard
+
+**Say:**
+SAST: Static Application Security Testing
+"To safely manage high-velocity agent code generation, organizations must enforce a four-pillar automated verification standard: First, integrate automated SAST tools like Bandit or Semgrep into the CI pipeline. Second, utilize read-only AI subagents for preliminary security reviews. Third, mandate human oversight for sensitive paths like authentication and payments. Fourth, run dependency scanners like pip-audit to catch vulnerable packages." 
+
+
+---
+
+
+
+
+## Slide 33: Security Review as a First-Class Verification Step
+
+**Say:**
+SAST: Static Application Security Testing
+"Security review must be a mandatory, non-skippable step in the Verify phase of the agentic development life cycle. The massive throughput advantage of AI agents disappears instantly the moment a critical vulnerability ships to production. By embedding automated SAST, agent-assisted checks, and targeted human reviews into the workflow, teams ensure that speed does not compromise safety."
+
+
+---
+
+
+
+
+## Slide 34: Regulatory Frameworks and AI Code Generation
+
+**Say:**
+"As AI coding agents integrate into production workflows, they intersect with regulatory frameworks originally designed for human engineers. The core legal and compliance principle remains unchanged: the organization deploying the system is entirely responsible for its outputs."
+
+---
+
+
+
+
+## Slide 35: Connecting Theory to Recent Security Research
+
+**Say:**
+“For some further readings related to the topic, here are some recent researches about the topic that shows why security with AI is a hot topic. As you can see, AI-Generated code is still highly vulnerable to attacks developed against humans.”
+
+---
+
+
+
+
+## Slide 36: Part 4 Summary & Key Takeaways
+
+**Say:**
+"To wrap up Part 4, remember that there are many vulnerabilities in AI-generated code, so agentic coding must always be paired with rigorous verification before you can safely harness the productivity of AI coding assistants. Let's move on to the next part."
+
+---
+
+
+
+
+## Slide 37: Practical Dependency Scanning & Local Execution
+
+**Say:**
+"Moving into practical implementation with Tutorial 9, developers must validate dependencies added by AI agents. This slide shows you how to run dependency vulnerability scanners like pip-audit against agent-generated requirements files to detect known CVEs before code is even committed. Try them out in your IDE and see what pip-audit returns."
+
+---
+
+
+
+
+## Slide 38: Integrating Dependency Auditing into CI Pipelines
+
+**Say:**
+"To automate verification at scale, we configure continuous integration pipelines to run SAST and dependency audits automatically. As shown in our pipeline configuration, jobs like dependency-scan execute pip-audit and output JSON artifacts whenever unmitigated vulnerabilities or unvetted packages are introduced."
+
+---
+
+
+
+
+## Slide 39: Integrating Dependency Auditing into CI Pipelines
+
+**Say:**
+“And here’s the update you need to do to GitLab CI. Update it and then try to run the pipeline again with the problematic requirements I showed you before.”
+
+---
+
+
+## Slide 40 · References — Parts 1–2
 
 **Say:**
 Reference material for research and frameworks.
@@ -468,7 +594,7 @@ Reference material for research and frameworks.
 ---
 
 
-## Slide 29 · References — Parts 1–2
+## Slide 41 · References — Parts 1–2
 
 **Say:**
 Reference material for cases and disclosures.
